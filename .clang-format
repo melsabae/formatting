@@ -1,7 +1,7 @@
 ---
 Language:        Cpp
 # BasedOnStyle:  Objectively The Best
-AccessModifierOffset: 4
+AccessModifierOffset: -4
 AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: true
 AlignConsecutiveAssignments: true
@@ -51,7 +51,7 @@ BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
 BreakStringLiterals: true
-ColumnLimit: 0
+ColumnLimit: 120
 CommentPragmas:  '^ IWYU pragma:'
 CompactNamespaces: false
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
