@@ -3,30 +3,31 @@ AlignConsecutiveAssignments: true
 AlignConsecutiveBitfields: true
 AlignConsecutiveDeclarations: true
 AlignConsecutiveMacros: true
-AlignEscapedNewlines: ENAS_LEFT
-AlignOperands: OAS_AlignAfterOperator
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignAfterOperator: AlignAfterOperator
 AlignTrailingComments: true
 AllowAllAgrumentsOnNextLine: false
 AllowAllConstructorInitializersOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortBlocksOnASingleLine: SBS_Never
+AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortEnumsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: SFS_None
-AllowShortIfStatementsOnASingleLine: SIS_Never
-AllowShortLambdasOnASingleLine: SLS_None
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
 AllowShortLoopsOnASingleLine: false
-AlwaysBreakAfterReturnType: RTBS_All
+AlwaysBreakAfterReturnType: All
 AlwaysBreakBeforeMultilineStrings: false
-AlwaysBreakTemplateDeclarations: BTDS_Yes
+AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
 BinPackParameters: false
-BitFieldColonSpacing: BFCS_After
-BraceWrapping: BS_Custom
+BitFieldColonSpacing: After
+BraceWrapping: Custom
 BraceWrapping:
   AfterCaseLabel: true
   AfterClass: true
-  AfterControlStatement: BWACS_Always
+  AfterControlStatement: Always
   AfterEnum: true
   AfterFunction: true
   AfterNamespace: true
@@ -41,12 +42,12 @@ BraceWrapping:
   SplitEmptyFunction: true
   SplitEmptyRecord: true
   SplitEmptyNamespace: true
-BreakBeforeBinaryOperators: BOS_NonAssignment
-BreakBeforeBracers: BS_Allman
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBracers: Allman
 BreakBeforeConceptDeclarations: true
 BreakBeforeTernaryOperators: true
-BreakConstructorInitializers: BCIS_BeforeComma
-BreakInheritanceList: BILS_BeforeComma
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
 BreakStringLiterals: true
 ColumnLimit: 0
 #CommentPragmas: ""
@@ -55,10 +56,10 @@ ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
 Cpp11BracedListStyle: true # TODO
-#DeriveLineEnding: false
-#DerivePointerAlignment: false
+DeriveLineEnding: false
+DerivePointerAlignment: false
 FixNamespaceComments: false
-IncludeBlocks: IBS_Regoup
+IncludeBlocks: Regroup
 IncludeCategories:
   - Regex:           '^<[^/]*'    #include <system_include>
     SortPriority:    1
@@ -70,31 +71,31 @@ IncludeCategories:
     SortPriority:    4
 IndentCaseBlocks: true
 IndentCaseBLabels: true
-IndentExternBlock: IEBS_AfterExternBlock
+IndentExternBlock: AfterExternBlock
 IndentGotoLables: false
-IndentPPDirectives: PPDIS_AfterHash
+IndentPPDirectives: AfterHash
 IndentPragmas: false # follow IndentPPDirectives' setting
 IndentRequires: false
 IndentWidth: 4
 IndentWrappedFunctionNames: false
-InsertTrailingCommas: TCS_Wrapped
+InsertTrailingCommas: Wrapped
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 2
-NamespaceIndentation: NT_All
-PointerAlignment: PAS_Left
+NamespaceIndentation: All
+PointerAlignment: Left
 ReflowComments: true
 SortIncludes: true
 SortUsingDeclarations: true
 SpaceAfterCStyleCast: true
 SpaceAfterLogicalNot: true
 SpaceAfterTemplateKeyword: false
-SpaceAroundPointerQualifiers: SAPQ_Before
+SpaceAroundPointerQualifiers: Before
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeCaseColon: false
 SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: false
 SpaceBeforeInheritanceColon: false
-SpaceBeforeParens: SBPO_ControlStatements
+SpaceBeforeParens: ControlStatements
 SpaceBeforeRangeBasedForLoopColon: true
 SpaceBeforeSquareBrackets: true
 SpaceInEmptyBlock: false
@@ -108,4 +109,4 @@ SpacesInParentheses: false
 SpacesInSquareBrackets: false
 TabWidth: 4
 UseCRLF: false
-UseTab: UT_Never
+UseTab: Never
