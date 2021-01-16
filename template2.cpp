@@ -3,6 +3,10 @@
 #include <iostream>
 #include "header.h"
 #include <algorithm>
+#include <vector>
+
+using std::vector;
+using std::string;
 
 
 // see the macros lined up, see trailing comments lined up
@@ -16,7 +20,7 @@
 	"split across multiple lines." \
 	"the intention is to see if the formatters" \
 	"line them up in a way that suggests to the eye" \
-	"some form of structure or repeatability."
+	"some form of structure or repeatability. also testing to see where it lines up with respect to the final line"
 
 # if 0
 #if 0
@@ -31,10 +35,29 @@
 extern "C" {
 #endif
 namespace FooName {
-	namespace BarName { }
 
-	class FooClass {
+	const char* hey_check_out_this_string = "abcdefghikjlmnopqrstuvwxyz1234567890abcdefghikjlmnopqrstuvwxyz1234567890abcdefghikjlmnopqrstuvwxyz1234567890abcdefghikjlmnopqrstuvwxyz1234567890";
+
+	namespace BarName { } // namespace BarName
+
+	namespace BarName2 {
+	} // namespace BarName2
+
+	class FooClassParent1
+	{
+	};
+
+	class FooClassParent2
+	{
+	};
+
+	class FooClass:FooClassParent1, FooClassParent2 {
 		public:
+			FooClass()
+				:
+					bar(0),
+					foo(0)
+		{};
 		int FooYou() { return 7; }
 		int FooMe() { return this->FooYou() + 1; }
 		private:
@@ -111,7 +134,9 @@ int this_function_name_is_intentionally_long_so_as_to_trigger_certain_rules(int 
 int h(int);
 int h(int input)
 {
-	switch (input)
+
+	// is there an empty line above this one?
+	switch(input)
 	{
 		case 0:  return input + 1;
 		case 1:  return input + 11;
@@ -124,6 +149,16 @@ int h(int input)
 }
 
 
+
+
+
+
+
+
+// veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongComment with plenty of information can we get to the 120th column before time runs out
+// tune in next time
+/* second veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongComment with plenty of information */
+// how many empty lines were preserved from above?
 int h2(int input)
 {
 
@@ -131,7 +166,7 @@ int h2(int input)
 	int ret = 0;
 
 	// see formatting of a filthy stateful switch case
-	switch (input)
+	switch(input)
 	{
 		case 0:{
 			       ret += 1;
@@ -212,9 +247,12 @@ int main(int argc, char** argv) {
 		this_function_name_is_intentionally_long_so_as_to_trigger_certain_rules(7, 0.0, 0.1, 7) +
 		this_function_name_is_intentionally_long_so_as_to_trigger_certain_rules(7, 0.0, 0.1, 7);
 
-
+	int long_variable_name_just_because4 =
+		7 * this_function_name_is_intentionally_long_so_as_to_trigger_certain_rules(7, 0.000000000000000000000000000000000000000000000000, 7, 'a');
 
 	int* mask = p1;
+
+	int long_variable_name_just_because5 = long_variable_name_just_because3 + long_variable_name_just_because4 ? long_variable_name_just_because2 : 1;
 
   if (mask
       && ((mask[0] == '\0')
@@ -355,9 +393,28 @@ while(0);
 // see if the trailing comma is emphasized
 	if (baz > 0);
 
+#pragma idk
+#pragma wtf
+	#pragma test_this_indent
+
 	if (baz > 0);{};
 	if (baz > 0){};
 	if (baz > 0);{}
+
+	int z =  // this comment is intended to go for a while, so as to trigger specific rules and see how the resulting code is formatted
+		h2(
+				0);
+
+
+	vector<string> strings {"ahoy", "another string", "i want to see how this turns out", "im running out of ideas as well", "so im just typing things in the hopes i run into inspiration", "and failing that i should just hope to run off the end", "i just sneezed and must go to the restroom"};
+
+	vector<string> strings2{"ahoy", "another string", "i want to see how this turns out", "im running out of ideas as well", "so im just typing things in the hopes i run into inspiration", "and failing that i should just hope to run off the end", "i just sneezed and must go to the restroom"};
+
+	int seven = (double)7;
+	int eight = (float) !8;
+	int nine = ( char ) 9;
+
+	int array [9][10];
 
 	return 0;
 }
