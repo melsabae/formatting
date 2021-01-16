@@ -64,17 +64,17 @@ DisableFormat: false
 FixNamespaceComments: false
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex:           '^<[^/]*'    #include <system_include>
+  - Regex:           '^<[^/]*>'   #include <system_include>
     SortPriority:    1
-  - Regex:           '<(.*/.*)*>' #include <library/include/path>
+  - Regex:           '<.*>'       #allow / inside of the <> to obtain <library/include/files>
     SortPriority:    2
-  - Regex:           '^".*"'      #include "project_include"
+  - Regex:           '^"[^/]*"'   #include "project_include"
     SortPriority:    3
   - Regex:           '.*'         #maybe work on your regex you sucker
     SortPriority:    4
 IndentCaseBlocks: true
 IndentCaseLabels: true
-IndentExternBlock: AfterExternBlock
+IndentExternBlock: NoIndent
 IndentGotoLabels: false
 IndentPPDirectives: AfterHash
 #IndentPragmas: false # follow IndentPPDirectives' setting

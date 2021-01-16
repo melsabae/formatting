@@ -4,6 +4,7 @@
 #include "header.h"
 #include <algorithm>
 #include <vector>
+#include <fmt/printf.h>
 
 using std::vector;
 using std::string;
@@ -208,7 +209,7 @@ int main(int argc, char** argv) {
 
 	int a,b,c,d,ef;
 
-	
+
 
 	int i, k, p, q, n;
 
@@ -258,8 +259,8 @@ int main(int argc, char** argv) {
       && ((mask[0] == '\0')
           || (mask[1] == '\0' &&
               ((mask[0] == '0') || (mask[0] == '*')))));
-	  
-	  
+
+
 
 
 # if 0
@@ -311,7 +312,7 @@ int main(int argc, char** argv) {
 	// for (...)
 	// {
 	// }
-	
+
 	// see labels be not-indendeted ever, always left justified
 label1:
 
@@ -389,7 +390,7 @@ while(0);
 	( void) 0;
 	(void ) 0;
 	( void ) 7;
- 
+
 // see if the trailing comma is emphasized
 	if (baz > 0);
 
